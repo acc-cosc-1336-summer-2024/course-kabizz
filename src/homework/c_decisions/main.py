@@ -1,6 +1,6 @@
 import decisions
 #Get test score from user 
-score = int(input('Enter your test score: ')) 
+score = float(input('Enter your test score: ')) 
 #Get total points possible points in test from user
 total = int(input('Enter total possible points that can be made on test: '))  
 #This calculates the score to be displayed for user     
