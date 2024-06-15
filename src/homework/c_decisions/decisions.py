@@ -9,7 +9,7 @@ Good = .7
 Needs_Improvement = .6
 Unacceptable = 0
 def get_faculty_rating(ratio):
- #Returns rating compared to test score     
+ #Returns rating compared to test scores     
       if ratio >= Excellent:
         return ('Excellent')
       elif ratio >= Very_Good:
