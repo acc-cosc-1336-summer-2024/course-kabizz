@@ -4,12 +4,11 @@ def get_factorial(num):
         fact *= num
     return fact
  
-def sum_odd_numbers(num1):
-    value = 1
-    total = 0
-    while value < (2*num1) - 1:
-        if value % 2 == 1:
-            total += value
-        value += 1
-    return total
+def sum_odd_numbers(num):
+    sum = 0
+    i = 1  
+    while i <= num:
+        sum += i
+        i += 2  
+    return sum
 
