@@ -29,6 +29,7 @@ def menu():
                 if choice == '1':
                     break
                 elif choice == '2':
+                    print("Exiting...")
                     return
                 else:
                     print("Invalid choice. Please select again.")
@@ -50,6 +51,7 @@ def menu():
                 if choice == '1':
                     break
                 elif choice == '2':
+                    print("Exiting...")
                     return
                 else:
                     print("Invalid choice. Please select again.")
@@ -61,7 +63,7 @@ def menu():
                     print("Enter no if you want to return to the main menu")
                     exit_choice = input("Choose your answer: ")
                     if exit_choice.lower() == 'yes':
-                       print("Exiting the program...")
+                       print("Exiting...")
                        exit()
                     elif exit_choice.lower() == 'no':
                        break
