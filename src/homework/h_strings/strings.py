@@ -10,5 +10,9 @@ def get_dna_complement(base):
     }
     return complements.get(base, base)  # return the complement or the base itself if not found
 
+def reverse_dna_sequence(sequence):
+    return sequence[::-1]  # return the reversed sequence
+
 def complement_sequence(dna_sequence):
-    return ''.join(get_dna_complement(base) for base in dna_sequence)
+    complemented_sequence = ''.join(get_dna_complement(base) for base in dna_sequence)
+    return complemented_sequence

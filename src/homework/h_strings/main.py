@@ -38,13 +38,16 @@ def menu():
             print("You selected Option 2")
             while True:
                 try:
-                    dna_sequence = "ATCG"
-                    complementary_sequence = strings.complement_sequence(dna_sequence)
-                    print(f"Original sequence: {dna_sequence}")
-                    print(f"Complementary sequence: {complementary_sequence}")
-                    break
+                    dna_sequence = input('Enter a DNA Sequence (only A, T, C, G allowed): ').upper()
+                    if all(base in 'ATCG' for base in dna_sequence):
+                        complementary_sequence = strings.complement_sequence(dna_sequence)
+                        print(f"Original sequence: {dna_sequence}")
+                        print(f"Complementary sequence: {complementary_sequence}")
+                        break
+                    else:
+                         print('Wrong Entry. Please enter only letters A, T, C, G.')
                 except ValueError:
-                    print('Wrong Entry. Please enter a number between 1 and 100.')
+                    print('Wrong Entry. Please enter only letters A, T, C, G.')
             while True:
                 choice = input("Enter '1' to return to main menu or '2' to Exit: ")
                 if choice == '1':

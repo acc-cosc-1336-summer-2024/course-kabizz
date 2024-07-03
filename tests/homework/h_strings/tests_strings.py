@@ -9,5 +9,5 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(7, get_hamming_distance("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT"))
 
     def test_complement_sequence(self):
-        self.assertEqual("TTTTGGGCCA", complement_sequence("AAAACCCGGT"))
+        self.assertEqual(complement_sequence("AAAACCCGGT"), "TTTTGGGCCA")
 
