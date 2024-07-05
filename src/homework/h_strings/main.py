@@ -13,15 +13,21 @@ def menu():
             print("You selected Option 1")
             while True:
                 try:
-                    seq1 = input('Enter a DNA Sequence: ')
+                    seq1 = input('Enter a DNA Sequence (only A, T, C, G allowed): ')
                     seq2 = input('Enter a second DNA Sequence of equal length: ')
+        
                     if len(seq1) != len(seq2):
-                        raise ValueError
+                        raise ValueError("Sequences must be of the same length.")
+        
+                    if not all(base in 'ATCG' for base in seq1) or not all(base in 'ATCG' for base in seq2):
+                        raise ValueError("Sequences must only contain characters 'A', 'T', 'C', 'G'.")
+        
                     distance = strings.get_hamming_distance(seq1, seq2)
                     print(f"Hamming distance between '{seq1}' and '{seq2}' is {distance}")
                     break
-                except ValueError:
-                    print("Must be same length")
+    
+                except ValueError as e:
+                    print(e)
                 
 
             while True:
