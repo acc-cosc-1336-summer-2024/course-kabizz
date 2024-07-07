@@ -8,7 +8,7 @@ def get_dna_complement(base):
         'C': 'G',
         'G': 'C'
     }
-    return complements.get(base, base)  # return the complement or the base itself if not found
+    return complements.get(base, base)  # return the complement 
 
 def reverse_dna_sequence(sequence):
     return sequence[::-1]  # return the reversed sequence

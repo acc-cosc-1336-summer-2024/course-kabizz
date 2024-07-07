@@ -29,7 +29,6 @@ def menu():
                 except ValueError as e:
                     print(e)
                 
-
             while True:
                 choice = input("Enter '1' to return to main menu or '2' to Exit: ")
                 if choice == '1':
